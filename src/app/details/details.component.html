@@ -1,21 +1,19 @@
-<div class="text-center">
-  <h1 class="p-3">Details of {{ description.title }}</h1>
-  <img
-    src="https://image.tmdb.org/t/p/w500/{{ description.poster_path }}"
-    alt=""
-  />
-  <h1>{{ description.title }}</h1>
-  <p>{{ description.tagline }}</p>
-  <p>{{ description.status }}</p>
-  <p>{{ description.release_date }}</p>
-  <img
-    *ngIf="description.belongs_to_collection != null"
-    src="https://image.tmdb.org/t/p/w500/{{
-      description.belongs_to_collection.backdrop_path
-    }}"
-    alt=""
-  />
+<div class="text-center bg-all">
+  <h1 class="p-3">{{ description.title }}</h1>
+  <div class="container p-2 d-flex justify-content-start align-items-center">
+    <img
+      class="col-6 p-4"
+      src="https://image.tmdb.org/t/p/w500/{{ description.poster_path }}"
+      alt=""
+    />
+    <div class="col-5">
+      <p>{{ description.tagline }}</p>
+      <p>Release Date: {{ description.release_date }}</p>
+      <p *ngIf="description.overview != null">{{ description.overview }}</p>
+    </div>
+  </div>
   <div>
+    <h3>Genders:</h3>
     <span ngIF="len > 1">
       {{ description.genres[0].name }}
     </span>
@@ -26,7 +24,14 @@
       {{ description.genres[2].name }}
     </span>
   </div>
-  <p *ngIf="description.overview != null">{{ description.overview }}</p>
+  <img
+    class="p-2"
+    *ngIf="description.belongs_to_collection != null"
+    src="https://image.tmdb.org/t/p/w500/{{
+      description.belongs_to_collection.backdrop_path
+    }}"
+    alt=""
+  />
 </div>
 <h1 class="text-center m-3">Similar Movies</h1>
 <div
