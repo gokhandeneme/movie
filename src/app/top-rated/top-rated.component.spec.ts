@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MostViewedComponent } from './most-viewed.component';
+import { TopRatedComponent } from './top-rated.component';
 
-describe('MostViewedComponent', () => {
-  let component: MostViewedComponent;
-  let fixture: ComponentFixture<MostViewedComponent>;
+describe('TopRatedComponent', () => {
+  let component: TopRatedComponent;
+  let fixture: ComponentFixture<TopRatedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MostViewedComponent ]
+      declarations: [ TopRatedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MostViewedComponent);
+    fixture = TestBed.createComponent(TopRatedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

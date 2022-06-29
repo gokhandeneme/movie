@@ -1,0 +1,23 @@
+.background-all {
+  background-color: #d7e4e4;
+}
+
+.card {
+  background-color: #d7e4e4;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  background-color: rgb(84, 129, 108);
+  cursor: pointer;
+  opacity: 0.8;
+  top: -10px;
+}
+
+.card-body {
+  background-color: #aabbbe;
+  border: #889ea1 1px solid;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}

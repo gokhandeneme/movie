@@ -1,0 +1,36 @@
+<div class="background-all p-2">
+  <div>
+    <h1 class="text-center m-3">Top Rated Movie List</h1>
+  </div>
+  <div
+    class="check-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gx-0"
+  >
+    <div *ngFor="let posts of toprated.results">
+      <div
+        class="card text-center p-1 m-2 border-0"
+        (click)="getMovieID(posts.id)"
+      >
+        <img
+          src="https://image.tmdb.org/t/p/w500/{{ posts.poster_path }}"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            {{
+              posts.title.length > 15
+                ? (posts.title | slice: 0:15) + ".."
+                : posts.title
+            }}
+          </h5>
+          <p class="card-text">
+            {{
+              posts.overview.length > 100
+                ? (posts.overview | slice: 0:100) + ".."
+                : posts.overview
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
