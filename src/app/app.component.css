@@ -20,3 +20,7 @@ ul {
 i {
   font-size: 1.4rem;
 }
+
+.bg-header {
+  background-color: rgb(172, 230, 210);
+}

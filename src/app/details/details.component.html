@@ -1,10 +1,11 @@
 <div class="text-center">
-  <h1>{{ description.title }}</h1>
-  <p>{{ description.tagline }}</p>
+  <h1 class="p-3">Details of {{ description.title }}</h1>
   <img
     src="https://image.tmdb.org/t/p/w500/{{ description.poster_path }}"
     alt=""
   />
+  <h1>{{ description.title }}</h1>
+  <p>{{ description.tagline }}</p>
   <p>{{ description.status }}</p>
   <p>{{ description.release_date }}</p>
   <img
@@ -15,12 +16,15 @@
     alt=""
   />
   <div>
-    <p ngIF="len > 0">
+    <span ngIF="len > 1">
       {{ description.genres[0].name }}
-    </p>
-    <p ngIF="len > 1">
+    </span>
+    <span ngIF="len > 2">
       {{ description.genres[1].name }}
-    </p>
+    </span>
+    <span ngIF="len > 3">
+      {{ description.genres[2].name }}
+    </span>
   </div>
   <p *ngIf="description.overview != null">{{ description.overview }}</p>
 </div>

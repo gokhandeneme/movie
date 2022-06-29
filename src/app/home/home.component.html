@@ -1,5 +1,5 @@
 <body class="background-all">
-  <h1 class="text-center p-3">Upcoming Movies</h1>
+  <h1 class="text-center p-4">Upcoming Movies</h1>
   <div class="container p-2 d-flex justify-content-start align-items-center">
     <div
       id="carouselControls"
@@ -99,8 +99,8 @@
       </button>
     </div>
     <div class="p-4">
-      <h2>Movie Title : {{ upcoming.results[getid].title }}</h2>
-      <p>Overview : {{ upcoming.results[getid].overview }}</p>
+      <h2 class="text-center">{{ upcoming.results[getid].title }}</h2>
+      <p>{{ upcoming.results[getid].overview }}</p>
       <p>Release Date : {{ upcoming.results[getid].release_date }}</p>
     </div>
   </div>
