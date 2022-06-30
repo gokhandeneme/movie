@@ -1,0 +1,29 @@
+.background-all {
+  background-color: #d7e4e4;
+}
+
+.card {
+  background-color: #d7e4e4;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  top: -10px;
+}
+
+.movieCard:hover {
+  background-color: rgb(84, 129, 108);
+  border-radius: 15px;
+}
+
+.tvCard:hover {
+  background-color: rgb(129, 84, 90);
+  border-radius: 15px;
+}
+
+img {
+  border-radius: 15px;
+}

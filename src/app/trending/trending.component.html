@@ -1,0 +1,42 @@
+<div class="background-all p-2">
+  <div>
+    <h1 class="text-center m-3">Trending Movie and TV Series List</h1>
+  </div>
+  <div
+    class="check-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gx-0"
+  >
+    <div *ngFor="let posts of trending.results">
+      <div class="card text-center m-2 border-0">
+        <div
+          *ngIf="posts.media_type === 'movie'; then movieBlock; else tvBlock"
+        ></div>
+        <ng-template #movieBlock>
+          <div class="movieCard" (click)="getMovieID(posts.id)">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{ posts.poster_path }}"
+              class="card-img-top"
+            />
+            <div class="p-3">
+              {{ posts.title }}
+              <div>Movie</div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #tvBlock>
+          <div class="tvCard">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{ posts.poster_path }}"
+              class="card-img-top"
+            />
+            <div class="p-3">
+              {{ posts.name }}
+              <div>Tv Series</div>
+            </div>
+          </div>
+        </ng-template>
+
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

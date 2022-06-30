@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { PopularComponent } from './popular/popular.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
+import { TrendingComponent } from './trending/trending.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'popular', component: PopularComponent },
   { path: 'details', component: DetailsComponent },
   { path: 'topRated', component: TopRatedComponent },
+  { path: 'trending', component: TrendingComponent },
 ];
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ const routes: Routes = [
     DetailsComponent,
     PopularComponent,
     TopRatedComponent,
+    TrendingComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
   providers: [],

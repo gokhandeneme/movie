@@ -3,6 +3,8 @@
   cursor: pointer;
   opacity: 0.8;
   top: -10px;
+  border-end-end-radius: 15px;
+  border-end-start-radius: 15px;
 }
 
 .card {

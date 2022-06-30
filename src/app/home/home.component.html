@@ -1,9 +1,9 @@
 <body class="background-all">
   <h1 class="text-center p-4">Upcoming Movies</h1>
-  <div class="container p-2 d-flex justify-content-start align-items-center">
+  <div class="container p-2 d-flex justify-content-center align-items-center">
     <div
       id="carouselControls"
-      class="carousel slide d-grid col-5"
+      class="carousel slide col-5 col-xl-4"
       data-bs-ride="carousel"
     >
       <div class="carousel-indicators">
@@ -40,41 +40,43 @@
           aria-label="Slide 5"
         ></button>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://image.tmdb.org/t/p/w400/{{
-              upcoming.results[0].poster_path
-            }}"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://image.tmdb.org/t/p/w400/{{
-              upcoming.results[1].poster_path
-            }}"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://image.tmdb.org/t/p/w400/{{
-              upcoming.results[2].poster_path
-            }}"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://image.tmdb.org/t/p/w400/{{
-              upcoming.results[3].poster_path
-            }}"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://image.tmdb.org/t/p/w400/{{
-              upcoming.results[4].poster_path
-            }}"
-          />
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{
+                upcoming.results[0].poster_path
+              }}"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{
+                upcoming.results[1].poster_path
+              }}"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{
+                upcoming.results[2].poster_path
+              }}"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{
+                upcoming.results[3].poster_path
+              }}"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://image.tmdb.org/t/p/w500/{{
+                upcoming.results[4].poster_path
+              }}"
+            />
+          </div>
         </div>
       </div>
       <button
