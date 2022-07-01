@@ -6,3 +6,18 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.responsive {
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .responsive {
+    display: inline;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+  }
+}

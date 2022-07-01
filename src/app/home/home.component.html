@@ -1,17 +1,14 @@
 <body class="background-all">
   <h1 class="text-center p-4">Upcoming Movies</h1>
-  <div class="container p-2 d-flex justify-content-center align-items-center">
-    <div
-      id="carouselControls"
-      class="carousel slide col-5 col-xl-4"
-      data-bs-ride="carousel"
-    >
+  <div class="container responsive align-items-center">
+    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button
           type="button"
           data-bs-target="#carouselControls"
           data-bs-slide-to="0"
           class="active"
+          (click)="getMovie(0)"
           aria-current="true"
           aria-label="Slide 1"
         ></button>
@@ -19,24 +16,28 @@
           type="button"
           data-bs-target="#carouselControls"
           data-bs-slide-to="1"
+          (click)="getMovie(1)"
           aria-label="Slide 2"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselControls"
           data-bs-slide-to="2"
+          (click)="getMovie(2)"
           aria-label="Slide 3"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselControls"
           data-bs-slide-to="3"
+          (click)="getMovie(3)"
           aria-label="Slide 4"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselControls"
           data-bs-slide-to="4"
+          (click)="getMovie(4)"
           aria-label="Slide 5"
         ></button>
       </div>
@@ -44,35 +45,35 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="https://image.tmdb.org/t/p/w400/{{
+              src="https://image.tmdb.org/t/p/w500/{{
                 upcoming.results[0].poster_path
               }}"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://image.tmdb.org/t/p/w400/{{
+              src="https://image.tmdb.org/t/p/w500/{{
                 upcoming.results[1].poster_path
               }}"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://image.tmdb.org/t/p/w400/{{
+              src="https://image.tmdb.org/t/p/w500/{{
                 upcoming.results[2].poster_path
               }}"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://image.tmdb.org/t/p/w400/{{
+              src="https://image.tmdb.org/t/p/w500/{{
                 upcoming.results[3].poster_path
               }}"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://image.tmdb.org/t/p/w400/{{
+              src="https://image.tmdb.org/t/p/w500/{{
                 upcoming.results[4].poster_path
               }}"
             />
@@ -100,20 +101,18 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <!-- Coruosel ends -->
     <div class="p-4">
-      <h2 class="text-center">{{ upcoming.results[getid].title }}</h2>
+      <h2 class="text-center border-bottom botder-2 p-2 border-secondary">
+        {{ upcoming.results[getid].title }}
+      </h2>
       <p>{{ upcoming.results[getid].overview }}</p>
       <p>Release Date : {{ upcoming.results[getid].release_date }}</p>
     </div>
   </div>
 
   <div class="p-4">
-    <div class="d-flex justify-content-between">
-      <div class="p-5">
-        <h1>{{ upcoming.results[5].title }}</h1>
-        <p>{{ upcoming.results[5].overview }}</p>
-        <p>Release Date : {{ upcoming.results[5].release_date }}</p>
-      </div>
+    <div class="d-flex justify-content-start">
       <div class="p-5">
         <img
           src="https://image.tmdb.org/t/p/w200/{{
@@ -121,13 +120,15 @@
           }}"
         />
       </div>
-    </div>
-    <div class="d-flex flex-row-reverse justify-content-between">
       <div class="p-5">
-        <h1>{{ upcoming.results[6].title }}</h1>
-        <p>{{ upcoming.results[6].overview }}</p>
-        <p>Release Date : {{ upcoming.results[6].release_date }}</p>
+        <h1 class="border-bottom botder-2 p-2 border-secondary">
+          {{ upcoming.results[5].title }}
+        </h1>
+        <p>{{ upcoming.results[5].overview }}</p>
+        <p>Release Date : {{ upcoming.results[5].release_date }}</p>
       </div>
+    </div>
+    <div class="d-flex justify-content-start">
       <div class="p-5">
         <img
           src="https://image.tmdb.org/t/p/w200/{{
@@ -135,19 +136,28 @@
           }}"
         />
       </div>
-    </div>
-    <div class="d-flex justify-content-between">
       <div class="p-5">
-        <h1>{{ upcoming.results[7].title }}</h1>
-        <p>{{ upcoming.results[7].overview }}</p>
-        <p>Release Date : {{ upcoming.results[7].release_date }}</p>
+        <h1 class="border-bottom botder-2 p-2 border-secondary">
+          {{ upcoming.results[6].title }}
+        </h1>
+        <p>{{ upcoming.results[6].overview }}</p>
+        <p>Release Date : {{ upcoming.results[6].release_date }}</p>
       </div>
+    </div>
+    <div class="d-flex justify-content-start">
       <div class="p-5">
         <img
           src="https://image.tmdb.org/t/p/w200/{{
             upcoming.results[7].poster_path
           }}"
         />
+      </div>
+      <div class="p-5">
+        <h1 class="border-bottom botder-2 p-2 border-secondary">
+          {{ upcoming.results[7].title }}
+        </h1>
+        <p>{{ upcoming.results[7].overview }}</p>
+        <p>Release Date : {{ upcoming.results[7].release_date }}</p>
       </div>
     </div>
   </div>

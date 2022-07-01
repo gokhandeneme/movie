@@ -20,17 +20,15 @@ export class DetailsComponent implements OnInit {
       )
       .subscribe((response) => {
         this.description = response;
-        console.log(response);
         this.len = this.description.genres.length;
       });
-    //smirlar
+    //similar
     http
       .get(
         `https://api.themoviedb.org/3/movie/${this.des}/similar?api_key=fdb4494c3f989916f8b96295c0215907&language=en-US&page=1`
       )
       .subscribe((response) => {
         this.similar = response;
-        console.log(response);
       });
   }
 

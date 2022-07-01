@@ -18,7 +18,11 @@ ul {
 }
 
 i {
-  font-size: 1.4rem;
+  font-size: 2rem;
+}
+
+i:hover {
+  cursor: pointer;
 }
 
 .bg-header {

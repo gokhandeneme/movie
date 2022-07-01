@@ -38,5 +38,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  getMovie(value: any) {
+    this.getid = value;
+  }
+
   ngOnInit(): void {}
 }

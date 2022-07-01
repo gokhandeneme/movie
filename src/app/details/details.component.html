@@ -1,5 +1,7 @@
 <div class="text-center bg-all">
-  <h1 class="p-3">{{ description.title }}</h1>
+  <h1 class="container p-3 border-bottom border-3 border-secondary">
+    {{ description.title }}
+  </h1>
   <div class="container p-2 d-flex justify-content-start align-items-center">
     <img
       class="col-6 p-4"
@@ -7,22 +9,24 @@
       alt=""
     />
     <div class="col-5">
-      <p>{{ description.tagline }}</p>
-      <p>Release Date: {{ description.release_date }}</p>
+      <p class="fs-3">{{ description.tagline }}</p>
       <p *ngIf="description.overview != null">{{ description.overview }}</p>
+      <p>Release Date: {{ description.release_date }}</p>
     </div>
   </div>
-  <div>
+  <div class="p1">
     <h3>Genders:</h3>
-    <span ngIF="len > 1">
-      {{ description.genres[0].name }}
-    </span>
-    <span ngIF="len > 2">
-      {{ description.genres[1].name }}
-    </span>
-    <span ngIF="len > 3">
-      {{ description.genres[2].name }}
-    </span>
+    <div>
+      <span *ngIf="description.genres[0] != null">
+        {{ description.genres[0].name }},
+      </span>
+      <span *ngIf="description.genres[1] != null">
+        {{ description.genres[1].name }},
+      </span>
+      <span *ngIf="description.genres[2] != null">
+        {{ description.genres[2].name }}
+      </span>
+    </div>
   </div>
   <img
     class="p-4"
@@ -33,7 +37,7 @@
     alt=""
   />
 </div>
-<h1 class="text-center m-3">Similar Movies</h1>
+<h1 class="text-center m-3 border-bottom border-3">Similar Movies</h1>
 <div
   class="check-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gx-0"
 >
