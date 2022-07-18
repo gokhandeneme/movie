@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'details', component: DetailsComponent },
   { path: 'topRated', component: TopRatedComponent },
   { path: 'trending', component: TrendingComponent },
+  { path: '**', pathMatch: 'full', component: HomeComponent },
 ];
 @NgModule({
   declarations: [
