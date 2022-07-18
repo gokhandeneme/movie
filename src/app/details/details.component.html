@@ -1,5 +1,8 @@
 <div class="text-center bg-all">
-  <h1 class="container p-3 border-bottom border-3 border-secondary">
+  <h1
+    *ngIf="description.title != null"
+    class="container p-3 border-bottom border-3 border-secondary"
+  >
     {{ description.title }}
   </h1>
   <div class="container p-2 d-flex justify-content-start align-items-center">
