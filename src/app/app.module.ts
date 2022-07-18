@@ -9,6 +9,7 @@ import { DetailsComponent } from './details/details.component';
 import { PopularComponent } from './popular/popular.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { TrendingComponent } from './trending/trending.component';
+import { enableProdMode } from '@angular/core';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'trending', component: TrendingComponent },
   { path: '**', pathMatch: 'full', component: HomeComponent },
 ];
+enableProdMode();
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ const routes: Routes = [
     TopRatedComponent,
     TrendingComponent,
   ],
+
   imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
