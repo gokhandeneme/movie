@@ -12,20 +12,20 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <nav class="navbar justify-content-between">
+    <nav class="navbar justify-content-center">
       <div id="collapsible" class="collapse navbar-collapse">
-        <ul class="list-group list-group-horizontal me-auto">
+        <ul class="list-group list-group-horizontal d-flex align-items-center">
           <li>
-            <a routerLink="/home" class="pe-3 fs-5">Home</a>
+            <a routerLink="/home" class="m-0 pe-3">Home</a>
           </li>
           <li>
-            <a routerLink="/popular" class="pe-3 fs-5">Popular</a>
+            <a routerLink="/popular" class="m-0 pe-3">Popular</a>
           </li>
           <li>
-            <a routerLink="/topRated" class="pe-3 fs-5">Top Rated</a>
+            <a routerLink="/topRated" class="m-0 pe-3">Top Rated</a>
           </li>
           <li>
-            <a routerLink="/trending" class="pe-3 fs-5">Trending</a>
+            <a routerLink="/trending" class="m-0 pe-3">Trending</a>
           </li>
           <li>
             <input
@@ -35,7 +35,6 @@
               class="form-control"
               id="search"
               placeholder="Search"
-              style="width: 100px"
               list="datalistOptions"
               (keyup.enter)="goMovie()"
             />
@@ -45,6 +44,9 @@
               <option value="{{ searchMovie?.results[2].title }}"></option>
               <option value="{{ searchMovie?.results[3].title }}"></option>
             </datalist>
+          </li>
+          <li>
+            <i class="p-3 fs-3 bi bi-person-circle"></i>
           </li>
         </ul>
       </div>

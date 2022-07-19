@@ -3,6 +3,7 @@
 a {
   color: #333;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
 a:hover {
@@ -27,4 +28,23 @@ i:hover {
 
 .bg-header {
   background-color: rgb(172, 230, 210);
+}
+
+#search {
+  width: 250px;
+}
+
+@media (max-width: 992px) {
+  #search {
+    width: 100px;
+  }
+  a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  a {
+    font-size: 1rem;
+  }
 }
