@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class DetailsComponent implements OnInit {
   des = sessionStorage.getItem('movieid');
   description: any;
+
   similar: any;
   len: any;
   constructor(private http: HttpClient, private route: Router) {
@@ -20,6 +21,7 @@ export class DetailsComponent implements OnInit {
       )
       .subscribe((response) => {
         this.description = response;
+        console.log(this.description);
         this.len = this.description.genres.length;
       });
     //similar

@@ -1,6 +1,6 @@
 <div class="text-center bg-all">
   <h1
-    *ngIf="description.title != null"
+    *ngIf="description?.title != null"
     class="container p-3 border-bottom border-3 border-secondary"
   >
     {{ description.title }}
@@ -8,11 +8,11 @@
   <div class="container p-2 d-flex justify-content-start align-items-center">
     <img
       class="col-6 p-4"
-      src="https://image.tmdb.org/t/p/w500/{{ description.poster_path }}"
+      src="https://image.tmdb.org/t/p/w500/{{ description?.poster_path }}"
       alt=""
     />
     <div class="col-5">
-      <p class="fs-3">{{ description.tagline }}</p>
+      <p class="fs-3">{{ description?.tagline }}</p>
       <p *ngIf="description.overview != null">{{ description.overview }}</p>
       <p>Release Date: {{ description.release_date }}</p>
     </div>
@@ -44,7 +44,7 @@
 <div
   class="check-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 gx-0"
 >
-  <div *ngFor="let posts of similar.results">
+  <div *ngFor="let posts of similar?.results">
     <div
       class="card text-center p-1 m-2 border-0"
       (click)="getMovieID(posts.id)"

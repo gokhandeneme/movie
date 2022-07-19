@@ -12,7 +12,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <nav class="navbar">
+    <nav class="navbar justify-content-between">
       <div id="collapsible" class="collapse navbar-collapse">
         <ul class="list-group list-group-horizontal me-auto">
           <li>
@@ -26,6 +26,25 @@
           </li>
           <li>
             <a routerLink="/trending" class="pe-3 fs-5">Trending</a>
+          </li>
+          <li>
+            <input
+              #movieName
+              (input)="inputChanged(movieName)"
+              type="search"
+              class="form-control"
+              id="search"
+              placeholder="Search"
+              style="width: 100px"
+              list="datalistOptions"
+              (keyup.enter)="goMovie()"
+            />
+            <datalist id="datalistOptions">
+              <option value="{{ searchMovie?.results[0].title }}"></option>
+              <option value="{{ searchMovie?.results[1].title }}"></option>
+              <option value="{{ searchMovie?.results[2].title }}"></option>
+              <option value="{{ searchMovie?.results[3].title }}"></option>
+            </datalist>
           </li>
         </ul>
       </div>
