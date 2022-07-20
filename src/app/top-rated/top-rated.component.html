@@ -18,14 +18,14 @@
           <h5 class="card-title">
             {{
               posts.title.length > 15
-                ? (posts.title | slice: 0:15) + ".."
+                ? (posts.title | slice: 0:15) + "..."
                 : posts.title
             }}
           </h5>
           <p class="card-text">
             {{
               posts.overview.length > 100
-                ? (posts.overview | slice: 0:100) + ".."
+                ? (posts.overview | slice: 0:100) + "..."
                 : posts.overview
             }}
           </p>

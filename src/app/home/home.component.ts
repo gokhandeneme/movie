@@ -42,5 +42,10 @@ export class HomeComponent implements OnInit {
     this.getid = value;
   }
 
+  getMovieID(id: any) {
+    sessionStorage.setItem('movieid', id);
+    this.route.navigate(['details']);
+  }
+
   ngOnInit(): void {}
 }
