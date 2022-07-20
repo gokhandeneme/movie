@@ -38,12 +38,9 @@ i:hover {
   #search {
     width: 100px;
   }
-  a {
-    font-size: 1.2rem;
-  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 693px) {
   a {
     font-size: 1rem;
   }

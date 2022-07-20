@@ -35,6 +35,15 @@ export class AppComponent {
       }
   }
 
+  goToLogin() {
+    if (sessionStorage.getItem('username') == null) {
+      this.route.navigate(['signin']);
+    } else {
+      this.route.navigate(['login']);
+      //loginde alert ver
+    }
+  }
+
   goMovie() {
     console.log('clicked');
     sessionStorage.setItem('movieid', this.searchMovie.results[0].id);
