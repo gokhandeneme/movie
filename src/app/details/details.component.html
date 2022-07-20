@@ -17,24 +17,24 @@
       <p>Release Date: {{ description.release_date }}</p>
     </div>
   </div>
-  <div class="p1">
-    <h3>Genders:</h3>
+  <div class="p1 p-2">
+    <h3>Genres:</h3>
     <div>
       <span *ngIf="description.genres[0] != null">
         {{ description.genres[0].name }}
       </span>
       <span *ngIf="description.genres[1] != null">
-        ,{{ description.genres[1].name }}
+        , {{ description.genres[1].name }}
       </span>
       <span *ngIf="description.genres[2] != null">
-        ,{{ description.genres[2].name }}
+        , {{ description.genres[2].name }}
       </span>
     </div>
   </div>
   <img
-    class="p-4"
+    class="p-3 imgres"
     *ngIf="description.belongs_to_collection != null"
-    src="https://image.tmdb.org/t/p/w400/{{
+    src="https://image.tmdb.org/t/p/w500/{{
       description.belongs_to_collection.backdrop_path
     }}"
     alt=""

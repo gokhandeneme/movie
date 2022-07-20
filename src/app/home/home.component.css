@@ -31,3 +31,14 @@ img:hover {
     width: 120px;
   }
 }
+
+@media (max-width: 400px) {
+  img {
+    width: 350px;
+  }
+
+  .carousel {
+    margin: auto;
+    width: 350px;
+  }
+}
